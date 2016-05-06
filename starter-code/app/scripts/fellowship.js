@@ -25,18 +25,30 @@ var body = document.querySelector('body');
 
 function makeMiddleEarth() {
   // create a section tag with an id of middle-earth
+  var world = document.createElement('section');
+  for(var i = 0, len = lands.length; i < len; i++){
   // inside, add each land as an article tag
+    var land = document.createElement('article');
   // inside each article tag include an h1 with the name of the land
+    land.innerHTML = '<h1>' + lands[i] + '<h1>';
+    world.appendChild(land); 
+
   // append middle-earth to your document body
+    body.appendChild(world);
+  //add the text node to the newly created div. 
+  }
 }
 
+
 makeMiddleEarth();
+
 
 
 // Part 2
 
 function makeHobbits() {
   // display an unordered list of hobbits in the shire (which is the second article tag on the page)
+  
   // give each hobbit a class of hobbit
 }
 
