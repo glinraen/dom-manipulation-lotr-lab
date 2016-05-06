@@ -39,18 +39,28 @@ function makeMiddleEarth() {
   }
 }
 
-
 makeMiddleEarth();
-
+/*var theShire = body.querySelectorAll('article')[0];
+var rivendell = body.querySelectorAll('article')[1];
+var mordor = body.querySelectorAll('article')[2];*/
 
 
 // Part 2
 
 function makeHobbits() {
   // display an unordered list of hobbits in the shire (which is the second article tag on the page)
-  
+ var hobbitList = document.createElement('ul');
+  for(var i = 0, len = hobbits.length; i < len; i++){
   // give each hobbit a class of hobbit
+
+    var hobbit = document.createElement('li');
+    hobbit.className = 'hobbit';
+    hobbit.innerText = hobbits[i];
+    hobbitList.appendChild(hobbit);
+  }
+  theShire.appendChild(hobbitList);
 }
+
 
 
 // Part 3
